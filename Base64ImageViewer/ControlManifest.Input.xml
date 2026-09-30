@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control
+    namespace="ASSAImageViewer"
+    constructor="Base64ImageViewer"
+    version="1.0.0"
+    display-name-key="Visor Base64 de Imágenes"
+    description-key="Visor responsive de TIFF multipágina e imágenes comunes recibidas como Base64"
+    control-type="standard">
+    <external-service-usage enabled="false" />
+
+    <property
+      name="fileName"
+      display-name-key="Nombre del archivo"
+      description-key="Nombre del archivo con extensión, por ejemplo documento.tiff o foto.png"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+    <property
+      name="base64Content"
+      display-name-key="Contenido Base64"
+      description-key="Contenido Base64 puro o URL data:image/... del archivo"
+      of-type="Multiple"
+      usage="input"
+      required="false" />
+    <property
+      name="mimeType"
+      display-name-key="Tipo MIME"
+      description-key="Tipo MIME opcional, por ejemplo image/tiff, cuando el nombre no tiene extensión"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="css/Base64ImageViewer.css" order="1" />
+    </resources>
+  </control>
+</manifest>
